@@ -1,0 +1,8 @@
+SELECT YEAR(enrolment_date) AS enrolment_year, COUNT(*) AS total_students FROM students WHERE enrolment_date IS NOT NULL GROUP BY enrolment_year;
+
+SELECT office_number, COUNT(*) AS teacher_count FROM teachers WHERE office_number IS NOT NULL GROUP BY office_number HAVING COUNT(*) > 1;
+
+SELECT `exam_id`, AVG(`vote`) FROM `exam_student` GROUP BY `exam_id`;
+
+SELECT `department_id`, COUNT(*) FROM `degrees` GROUP BY `department_id`;
+
